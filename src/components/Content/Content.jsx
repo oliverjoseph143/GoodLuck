@@ -1,6 +1,6 @@
 import React from 'react';
 import './Content.css';
-import img1 from '../../assets/car11img.jpg';
+import img1 from '../../assets/cas2.jpg';
 import img2 from '../../assets/car22img.jpeg';
 import img3 from '../../assets/car33img.jpeg';
 import img4 from '../../assets/car44img.jpeg';
@@ -119,7 +119,7 @@ function Content() {
 100 % Welcome Bonus on first deposit! Hurry up
 <span id='yelcolor'>Affiliate Partnership:</span>
 Explore the amazing affiliate program to earn money as you refer !
-<span id='yelcolor'>Referral Bonus:</span>
+<span id='yelcolor'>          Referral Bonus:</span>
 Great satisfaction comes from sharing with others. Invite your friends and families from your referral code and get rewarded ₹300 each.
     </span>
   </div>

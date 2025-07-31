@@ -1,11 +1,9 @@
 :root {
   --main-bg: #121212;
-  --secondary-bg: rgb(240, 255, 255);
-  --text-color: #ffffff;
-  --link-color: #666666;
+  --secondary-bg: rgb(28, 35, 35);
   --hover-color: #000000;
   --gradient: linear-gradient(to right, #6cc0ff, #4fff4f);
-  --border-green: #4fff4f;
+  --border-green: #feffff;
 }
 
 /* Body and Navbar base */
@@ -91,4 +89,25 @@ body {
     font-size: 13px;
   }
 }
-
+.profile
+{
+  width: 30px;
+  height: 30px;
+  color: #068c67;
+}
+.profile:hover{
+  color: #121212;
+  background: #068c67;
+}
+.gold{
+  color: rgb(219, 192, 37);
+}
+#bottomNavbar{
+  background: #068c67;
+}
+.textcol{
+  color: white;
+}
+nav{
+  background: #068c67;
+}

@@ -72,10 +72,10 @@
       color: var(--main-bg);
     }
 
-    /* Bottom Navigation */
-    .bottom-nav {
+    Bottom Navigation
+    /* .bottom-nav {
       background-color: var(--secondary-bg);
-    }
+    } */
 
     .bottom-nav .nav-link {
       color: var(--link-color);

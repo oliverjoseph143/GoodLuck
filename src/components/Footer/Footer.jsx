@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Logo & Description */}
         <div className="col-md-3">
-          <h4 className="fw-bold">khelo24match</h4>
+          <h4 className="fw-bold">GoodLuck</h4>
           <p>India's Best Online Casino Slot & Live Games</p>
           <p className="small">18+ Be Responsible</p>
         </div>
