@@ -1,0 +1,94 @@
+:root {
+  --main-bg: #121212;
+  --secondary-bg: rgb(240, 255, 255);
+  --text-color: #ffffff;
+  --link-color: #666666;
+  --hover-color: #000000;
+  --gradient: linear-gradient(to right, #6cc0ff, #4fff4f);
+  --border-green: #4fff4f;
+}
+
+/* Body and Navbar base */
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--main-bg);
+}
+
+.navbar-brand img {
+  height: 32px;
+}
+
+.navbar-brand span {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Buttons */
+.btn-login {
+  border: 1px solid var(--border-green);
+  background-color: transparent;
+  color: var(--border-green);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--border-green);
+  color: var(--main-bg);
+}
+
+.btn-register {
+  background: var(--gradient);
+  color: var(--main-bg);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.btn-register:hover {
+  opacity: 0.85;
+}
+
+/* Optional icon button */
+.icon-btn {
+  border: 1px solid var(--border-green);
+  background-color: transparent;
+  color: var(--border-green);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--border-green);
+  color: var(--main-bg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+
+  .icon-btn {
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+}
+
