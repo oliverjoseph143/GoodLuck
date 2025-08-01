@@ -1,0 +1,68 @@
+/* Overall section container */
+.content2-section {
+  padding: 3rem 0;
+  background-color: #121212; /* Dark background */
+}
+
+/* Space between image groups */
+.content2-section .container:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+/* Center-align row content */
+.content2-section .row {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Floating image card container */
+.floating-img {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #1e1e1e; /* Dark inner background */
+  padding: 8px;
+  height: 100%;
+}
+
+/* Image styling inside card */
+.floating-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(0.95) contrast(1.1);
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+/* Hover effect */
+.floating-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Active (click) zoom effect */
+.floating-img:active {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .floating-img {
+    margin-bottom: 1rem;
+  }
+}

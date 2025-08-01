@@ -7,18 +7,40 @@ import LoginImg from '../../assets/Login.jpg';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+
   const togglePassword = () => setShowPassword(!showPassword);
 
   const handleClose = () => {
-    navigate("/"); // Go back to homepage
+    navigate("/");
   };
 
-  const handleLogin = () => {
-    // Add your login logic here
-    alert("Login clicked!");
-    // Navigate to dashboard or another page after successful login
-    // navigate("/dashboard");
+  const validateForm = () => {
+    let valid = true;
+    let newErrors = { username: "", password: "" };
+
+    if (!username.trim()) {
+      newErrors.username = "Username / Email / Phone is required";
+      valid = false;
+    }
+    if (!password.trim()) {
+      newErrors.password = "Password is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      alert("Login successful");
+      // navigate("/dashboard");
+    }
   };
 
   return (
@@ -33,7 +55,7 @@ const Login = () => {
           <div className="login-img-section">
             <img
               alt="Welcome"
-              src={LoginImg} // Replace with actual image path
+              src={LoginImg}
               className="login-side-img"
             />
           </div>
@@ -41,47 +63,48 @@ const Login = () => {
           {/* Right Section - Form */}
           <div className="login-form-section">
             <h3>Login</h3>
+            <form onSubmit={handleLogin}>
 
-            <div className="input-group">
-              <IoPerson className="input-icon" />
-              <input
-                type="text"
-                placeholder="Username / Email / Phone"
-                className="login-input"
-              />
-            </div>
+              <div className="input-group">
+                <IoPerson className="input-icon" />
+                <input
+                  type="text"
+                  placeholder="Username / Email / Phone"
+                  className="login-input"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+              {errors.username && <span className="error-text">{errors.username}</span>}
 
-            <div className="input-group">
-              <IoLockClosed className="input-icon" />
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                className="login-input"
-              />
-              <button
-                type="button"
-                className="toggle-password"
-                onClick={togglePassword}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              <div className="input-group">
+                <IoLockClosed className="input-icon" />
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  className="login-input"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="toggle-password"
+                  onClick={togglePassword}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
+              {errors.password && <span className="error-text">{errors.password}</span>}
+
+              <button type="submit" className="login-btn">
+                LOGIN
               </button>
-            </div>
-
-            <button className="login-btn" onClick={handleLogin}>
-              LOGIN
-            </button>
+            </form>
 
             <Link to="/forgot-password" className="forgot-password">
               Forgot Password?
             </Link>
 
-            <div className="social-login">
-              <span>-or-</span>
-              <div className="social-icons">
-                <button type="button"><FaGoogle /></button>
-                <button type="button"><FaFacebookF /></button>
-              </div>
-            </div>
 
             <p className="signup-link">
               New? <Link to="/register">Create an account</Link>

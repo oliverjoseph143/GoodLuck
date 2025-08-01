@@ -1,0 +1,83 @@
+/* ForgetPass.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.forget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.forget-form {
+  background-color: #1e1e1e;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.forget-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.forget-description {
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  margin-bottom: 1.5rem;
+}
+
+.forget-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.forget-input:focus {
+  background-color: #333;
+  outline: none;
+}
+
+.forget-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color:#068c67;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.forget-btn:hover {
+  background-color: #068c67;
+}
+
+.back-login {
+  margin-top: 1rem;
+  color: #cccccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.back-login:hover {
+  color: #ffffff;
+}

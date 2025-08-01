@@ -1,11 +1,15 @@
 import React from 'react';
+import "./App.css";
 import Header from './components/Header/Header';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Content from './components/Content/Content';
+import Content2 from '../src/components/Content2/Content2'; 
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
-import Register from './components/Register/Register'; // Fixed typo (Resgister → Register)
+import Register from './components/Register/Register';
+import ForgotPassword from "./components/ForgetPassword/ForgetPass"; // adjust path
+
 
 function App() {
   return (
@@ -20,6 +24,7 @@ function App() {
             element={
               <>
                 <Content />
+                <Content2 /> {/* ✅ Render Content2 below Content */}
                 <Footer />
               </>
             }
@@ -28,6 +33,8 @@ function App() {
           {/* Login Page */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+
         </Routes>
       </div>
     </Router>

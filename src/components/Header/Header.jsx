@@ -12,7 +12,6 @@ const Header = () => {
       <nav className=" navbar navbar-expand-lg navbar-dark px-3 py-2">
         <div className="container-fluid">
           <Link className="navbar-brand d-flex align-items-center" to="/">
-            <CgProfile />
             <span className="ms-2">
               Good<span style={{ color: 'var(--border-green)' }}>Luck</span>
             </span>

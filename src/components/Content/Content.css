@@ -6,6 +6,9 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.container{
+  min-width: 1400px;
+}
 
 .content-title {
   font-size: 2rem;

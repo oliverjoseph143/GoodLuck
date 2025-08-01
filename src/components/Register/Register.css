@@ -16,7 +16,7 @@
 /* Main modal */
 .register-modal {
   width: 90%;
-  max-width: 900px;
+  max-width: 1400px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 255, 150, 0.2);
@@ -130,11 +130,12 @@
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .register-btn:hover {
   background: linear-gradient(to right, #068c67, #28a8e0);
+  transform: scale(1.02);
 }
 
 /* Social login */
@@ -184,6 +185,10 @@
   color: #068c67;
   text-decoration: none;
   font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
