@@ -111,3 +111,27 @@
   #yelcolor{
     color: #ffcc00;
   }
+
+          /* <div class="carousel-item">
+          <img
+            src={img5}
+            class="d-block w-100 h-100"
+            alt="Image 5"
+          />
+        </div> */
+
+    .carousel-item {
+  height: 400px; /* Set your desired height */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container without stretching */
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 250px;
+  }
+}

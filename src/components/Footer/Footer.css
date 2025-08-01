@@ -1,171 +1,133 @@
+:root {
+  --main-bg: #0b0b0b;
+  --text-color: #ffffff;
+  --border-green: #4fff4f;
+  --icon-hover: #f39c12;
+}
 
-    :root {
-      --main-bg: #121212;
-      --secondary-bg: rgb(240, 255, 255);
-      --text-color: #ffffff;
-      --link-color: #666666;
-      --hover-color: #000000;
-      --gradient: linear-gradient(to right, #6cc0ff, #4fff4f);
-      --border-green: #4fff4f;
-    }
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      background-color: var(--main-bg);
-      color: var(--text-color);
-    }
+.footer-container {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  border-top: 2px solid var(--border-green);
+  padding: 40px 20px;
+  font-size: 14px;
+}
 
-    .navbar {
-      background-color: var(--main-bg);
-    }
+/* Titles */
+.footer-container h4,
+.footer-container h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 
-    .navbar-brand img {
-      height: 32px;
-    }
+/* Lists */
+.footer-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-    .navbar-brand span {
-      font-weight: bold;
-      color: var(--text-color);
-    }
+.footer-container ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #ccc;
+}
 
-    .btn-login {
-      border: 1px solid var(--border-green);
-      background-color: transparent;
-      color: var(--border-green);
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.footer-container ul li:hover {
+  color: var(--border-green);
+}
 
-    .btn-login:hover {
-      background-color: var(--border-green);
-      color: var(--main-bg);
-    }
+/* Contact & Icons */
+.footer-icons a {
+  font-size: 20px;
+  color: white;
+}
 
-    .btn-register {
-      background: var(--gradient);
-      color: var(--main-bg);
-      border: none;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-weight: 600;
-      transition: opacity 0.3s ease;
-    }
+.footer-icons a:hover {
+  color: var(--icon-hover);
+}
 
-    .btn-register:hover {
-      opacity: 0.85;
-    }
+.footer-container strong {
+  color: var(--text-color);
+}
 
-    .icon-btn {
-      border: 1px solid var(--border-green);
-      background-color: transparent;
-      color: var(--border-green);
-      border-radius: 6px;
-      padding: 6px 10px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+/* Logos */
+.payment-logos img,
+.provider-logos img {
+  height: 32px;
+  width: auto;
+  filter: grayscale(0.2);
+}
 
-    .icon-btn:hover {
-      background-color: var(--border-green);
-      color: var(--main-bg);
-    }
+.payment-logos img:hover,
+.provider-logos img:hover {
+  /* No animation or transform */
+}
 
-    Bottom Navigation
-    /* .bottom-nav {
-      background-color: var(--secondary-bg);
-    } */
+/* Game Providers Section */
+.provider-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .bottom-nav .nav-link {
-      color: var(--link-color);
-      font-size: 13px;
-      text-align: center;
-      font-weight: 600;
-      text-transform: uppercase;
-      transition: color 0.3s ease;
-    }
+/* Payment Methods Section */
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .bottom-nav .nav-link i {
-      font-size: 18px;
-      display: block;
-      margin-bottom: 3px;
-    }
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  width: 80%;
+  color: #aaa;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    .bottom-nav .nav-link:hover,
-    .bottom-nav .nav-link:focus {
-      color: var(--hover-color);
-      text-decoration: none;
-    }
+.footer-bottom span {
+  cursor: pointer;
+}
 
-    /* Toggle spacing adjustments */
-    @media (max-width: 576px) {
-      .navbar-brand span {
-        font-size: 1rem;
-      }
+.footer-bottom span:hover {
+  color: var(--border-green);
+}
 
-      .btn-login,
-      .btn-register {
-        padding: 4px 10px;
-        font-size: 13px;
-      }
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
 
-      .icon-btn {
-        padding: 4px 6px;
-        font-size: 13px;
-      }
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
 
-      .bottom-nav .nav-link {
-        font-size: 12px;
-      }
-    }
- .carousel-item {
-      height: 400px;
-      position: relative;
-      overflow: hidden;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    /* Image fits the box */
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      filter: brightness(0.6); /* optional: darken image for readability */
-    }
-
-    /* Dot indicators */
-    .carousel-indicators [data-bs-target] {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #fff;
-    }
-
-    .carousel-indicators .active {
-      background-color: #0d6efd; /* you can change to var(--secondary-bg) if defined */
-    }
-
-    /* Responsive heights */
-    @media (max-width: 768px) {
-      .carousel-item {
-        height: 250px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .carousel-item {
-        height: 180px;
-      }
-    }
-  .carousel-indicators1 [data-bs-target] {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #fff;
-    }
-
-    .carousel-indicators .active {
-      background-color: #0d6efd; /* you can change to var(--secondary-bg) if defined */
-    }
+  .provider-logos,
+  .payment-logos {
+    justify-content: center;
+  }
+}

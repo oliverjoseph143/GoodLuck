@@ -1,14 +1,15 @@
 import React from 'react';
-import "./App.css";
+import './App.css';
 import Header from './components/Header/Header';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Content from './components/Content/Content';
-import Content2 from '../src/components/Content2/Content2'; 
+import Content2 from './components/Content2/Content2'; 
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
-import ForgotPassword from "./components/ForgetPassword/ForgetPass"; // adjust path
+import ForgotPassword from './components/ForgetPassword/ForgetPass';
+import Vip from './components/Vip/Vip'; // ✅ Import Vip component
 
 function App() {
   return (
@@ -23,17 +24,19 @@ function App() {
             element={
               <>
                 <Content />
-                <Content2 /> {/* ✅ Render Content2 below Content */}
+                <Content2 />
                 <Footer />
-                
               </>
             }
           />
 
-          {/* Login Page */}
+          {/* Login/Register/Forgot Password */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+
+          {/* VIP Page */}
+          <Route path="/vip" element={<Vip />} />
         </Routes>
       </div>
     </Router>

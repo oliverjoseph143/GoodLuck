@@ -17,7 +17,6 @@ const Login = () => {
   const handleClose = () => {
     navigate("/");
   };
-
   const validateForm = () => {
     let valid = true;
     let newErrors = { username: "", password: "" };

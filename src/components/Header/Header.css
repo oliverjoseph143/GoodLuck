@@ -1,115 +1,132 @@
-:root {
-  --main-bg: #121212;
-  --secondary-bg: rgb(28, 35, 35);
-  --hover-color: #000000;
-  --gradient: linear-gradient(to right, #6cc0ff, #4fff4f);
-  --border-green: #feffff;
+/* Menu Icon Button */
+.menu-icon-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-/* Body and Navbar base */
-body {
-  background-color: var(--main-bg);
-  color: var(--text-color);
-
+/* Side Popup Menu */
+.side-popup {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: #0e0e0e;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.navbar {
-  background-color: var(--main-bg);
-
+.side-popup.open {
+  right: 0;
 }
 
-.navbar-brand img {
-  height: 32px;
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.navbar-brand span {
-  font-weight: bold;
-  color: var(--text-color);
+.popup-logo {
+  height: 35px;
 }
 
-/* Buttons */
-.btn-login {
-  border: 1px solid var(--border-green);
-  background-color: transparent;
-  color: var(--border-green);
-  border-radius: 6px;
-  padding: 6px 12px;
+.popup-close {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Popup Menu Links */
+.popup-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-links li a {
+  color: white; /* updated from #c7c7c7 */
+  text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.popup-links li a:hover {
+  color: green;
+}
+
+/* Backdrop */
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.6);
+  z-index: 1000;
+}
+
+/* OTP Button Styling */
+.btn-otp {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* Login & Register Buttons */
+.btn-login,
+.btn-register {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Specific Styling */
+.btn-login {
+  background-color: transparent;
+  color: white !important;
+  border: 1px solid white;
 }
 
 .btn-login:hover {
-  background-color: var(--border-green);
-  color: var(--main-bg);
+  color: green !important;
+  border-color: green;
 }
 
 .btn-register {
-  background: var(--gradient);
-  color: var(--main-bg);
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-weight: 600;
-  transition: opacity 0.3s ease;
+  color: white !important;
+  border: 1px solid white;
 }
 
 .btn-register:hover {
-  opacity: 0.85;
+  color: green !important;
+  background: white;
+  border-color: #ccc;
 }
 
-/* Optional icon button */
-.icon-btn {
-  border: 1px solid var(--border-green);
-  background-color: transparent;
-  color: var(--border-green);
-  border-radius: 6px;
-  padding: 6px 10px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Additional Utility Classes */
+.gold {
+  color: gold;
 }
 
-.icon-btn:hover {
-  background-color: var(--border-green);
-  color: var(--main-bg);
-}
-
-/* Responsive tweaks */
-@media (max-width: 576px) {
-  .navbar-brand span {
-    font-size: 1rem;
-  }
-
-  .btn-login,
-  .btn-register {
-    padding: 4px 10px;
-    font-size: 13px;
-  }
-
-  .icon-btn {
-    padding: 4px 6px;
-    font-size: 13px;
-  }
-}
-.profile
-{
-  width: 30px;
-  height: 30px;
-  color: #068c67;
-}
-.profile:hover{
-  color: #121212;
-  background: #068c67;
-}
-.gold{
-  color: rgb(219, 192, 37);
-}
-#bottomNavbar{
-  background: #068c67;
-}
-.textcol{
+.color {
   color: white;
 }
-nav{
-  background: #068c67;
+
+span:hover {
+  color: rgb(247, 246, 244);
 }

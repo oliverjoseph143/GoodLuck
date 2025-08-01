@@ -2,6 +2,30 @@ import React from "react";
 import "./Footer.css";
 import { FaInstagram, FaPinterest, FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 
+// Imported payment logos
+import Logo1 from './../../assets/Applepay.png';
+import Logo2 from './../../assets/Gpay.png';
+import Logo3 from './../../assets/Payonner.png';
+import Logo4 from './../../assets/Paypal.png';
+import Logo5 from './../../assets/Visa.png';
+import Logo6 from './../../assets/Rupay.png';
+import Logo7 from './../../assets/Icic.png';
+import Logo8 from './../../assets/Hdfc.png';
+import Logo9 from './../../assets/Skrill.png';
+import Logo10 from './../../assets/Neteller.png';
+import Logo11 from './../../assets/Banker.png';
+
+
+// Game Providers logos
+
+import Glogo4 from './../../assets/Redtiger.png';
+import Glogo5 from './../../assets/Bestsoft.png';
+import Glogo6 from './../../assets/Buleprint.png';
+import Glogo2 from './../../assets/Yggdrasil.png';
+import Glogo1 from './../../assets/XpG.png';
+
+
+
 const Footer = () => {
   return (
     <footer className="footer-container container-fluid px-4 py-5">
@@ -45,7 +69,7 @@ const Footer = () => {
         {/* Get In Touch */}
         <div className="col-md-3">
           <h5>Get In Touch</h5>
-          <div className="footer-icons mb-2">
+          <div className="footer-icons mb-2 d-flex gap-3">
             <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
             <a href="https://pinterest.com" target="_blank" rel="noreferrer"><FaPinterest /></a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaXTwitter /></a>
@@ -55,30 +79,40 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Game Providers */}
-      <div className="text-center mt-5">
-        <h5 className="text-white">Game Providers</h5>
-        <div className="provider-logos d-flex justify-content-center flex-wrap mt-3">
-          {[...Array(8)].map((_, idx) => (
-            <img key={idx} src={`/images/game${idx + 1}.png`} alt={`Game${idx + 1}`} />
-          ))}
-        </div>
-      </div>
+    <div className="text-center mt-5">
+  <h5 className="text-white">Game Providers</h5>
+  <div className="provider-logos d-flex justify-content-center flex-wrap mt-3 gap-3">
+    <img src={Glogo1} alt="XpG" className="provider-img" />
+    <img src={Glogo2} alt="Yggdrasil" className="provider-img" />
+    <img src={Glogo4} alt="Red Tiger" className="provider-img" />
+    <img src={Glogo5} alt="Betsoft" className="provider-img" />
+    <img src={Glogo6} alt="Blueprint" className="provider-img" />
+  </div>
+</div>
 
       {/* Payment Methods */}
       <div className="text-center mt-5">
         <h5 className="text-white">Payment Methods</h5>
-        <div className="payment-logos d-flex justify-content-center flex-wrap mt-3">
-          {[...Array(10)].map((_, idx) => (
-            <img key={idx} src={`/images/pay${idx + 1}.png`} alt={`Pay${idx + 1}`} />
-          ))}
+        <div className="payment-logos d-flex justify-content-center flex-wrap mt-3 gap-3">
+          <img src={Logo1} alt="Apple Pay" className="payment-img" />
+          <img src={Logo2} alt="Google Pay" className="payment-img" />
+          <img src={Logo3} alt="Payoneer" className="payment-img" />
+          <img src={Logo4} alt="Paypal" className="payment-img" />
+          <img src={Logo5} alt="Visa" className="payment-img" />
+          <img src={Logo6} alt="Rupay" className="payment-img" />
+          <img src={Logo7} alt="Rupay" className="payment-img" />
+          <img src={Logo8} alt="Rupay" className="payment-img" />
+          <img src={Logo9} alt="Rupay" className="payment-img" />
+          <img src={Logo10} alt="Rupay" className="payment-img" />
+          <img src={Logo11} alt="Rupay" className="payment-img" />
+
         </div>
       </div>
 
       {/* Footer Bottom */}
       <div className="footer-bottom d-flex flex-wrap justify-content-center align-items-center gap-3 mt-5 pt-3 border-top text-white-50 small">
-        <span>© 2025 khelo24match. All Rights Reserved.</span>
-        <span>Terms & Condition</span>
+        <span>© 2025 Goodluck. All Rights Reserved.</span>
+        <span>Terms & Conditions</span>
         <span>AML & KYC</span>
         <span>Responsible Gambling</span>
         <span>Privacy Policy</span>
