@@ -1,46 +1,23 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header/Header';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import Content from './components/Content/Content';
-import Content2 from './components/Content2/Content2'; 
-import Footer from './components/Footer/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
-import ForgotPassword from './components/ForgetPassword/ForgetPass';
-import Vip from './components/Vip/Vip'; // ✅ Import Vip component
+import './Vip.css';
+import { BsFillStarFill } from 'react-icons/bs';
 
-function App() {
+const Vip = () => {
   return (
-    <Router>
-      <Header />
-
-      <div className="container mt-4">
-        <Routes>
-          {/* Home Page */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Content />
-                <Content2 />
-                <Footer />
-              </>
-            }
-          />
-
-          {/* Login/Register/Forgot Password */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-
-          {/* VIP Page */}
-          <Route path="/vip" element={<Vip />} />
-        </Routes>
+    <div className="vip-container">
+      <div className="vip-card">
+        <div className="vip-avatar-placeholder">VR</div>
+        <h2 className="vip-name">Random-Name</h2>
+        <p className="vip-title">Premium Member</p>
+        <p className="vip-id">ID: #VIP2025</p>
+        <p className="vip-since">Member Since: Jan 2024</p>
+        <div className="vip-badge">
+          <BsFillStarFill className="vip-icon" />
+          <span>Gold Badge</span>
+        </div>
       </div>
-    </Router>
+    </div>
   );
-}
+};
 
-export default App;
+export default Vip;

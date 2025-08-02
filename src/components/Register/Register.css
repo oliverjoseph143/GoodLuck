@@ -13,10 +13,11 @@
   z-index: 999;
 }
 
-/* Main modal */
-/* .register-modal {
+/* Modal container */
+.register-modal {
   width: 90%;
-  max-width: 140px;
+  max-width: 900px;
+  height: 85vh;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 255, 150, 0.2);
@@ -24,7 +25,7 @@
   background: #1f1f1f;
   position: relative;
   color: white;
-} */
+}
 
 /* Close button */
 .register-close {
@@ -44,9 +45,10 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  height: 100%;
 }
 
-/* Image section */
+/* Left image */
 .register-img-section {
   flex: 1;
   min-width: 300px;
@@ -63,7 +65,7 @@
   filter: drop-shadow(0 0 20px #28a8e0);
 }
 
-/* Form section */
+/* Right form section */
 .register-form-section {
   flex: 1;
   padding: 2.5rem;
@@ -71,6 +73,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 
 .register-form-section h3 {
@@ -106,92 +109,40 @@
   outline: none;
 }
 
-/* Toggle password icon */
-.toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #aaa;
-  cursor: pointer;
-}
-
 /* Register button */
 .register-btn {
   width: 100%;
   padding: 0.75rem;
   margin-top: 1rem;
-  background: linear-gradient(to right, #28a8e0, #068c67);
+  background: linear-gradient(to right, #28a8e0, #50d24b);
   border: none;
   border-radius: 30px;
   color: white;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s;
 }
 
 .register-btn:hover {
-  background: linear-gradient(to right, #068c67, #28a8e0);
-  transform: scale(1.02);
+  background: linear-gradient(to right, #50d24b, #28a8e0);
 }
 
-/* Social login */
-.social-register {
-  text-align: center;
-  margin-top: 1.5rem;
-  color: #ccc;
-}
-
-.social-register span {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons button {
-  background: #b1b0b0;
-  border: 1px solid #555;
-  border-radius: 50%;
-  padding: 0.6rem;
-  color: #090a0a;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.social-icons button:hover {
-  background: #444;
-  transform: scale(1.1);
-  color: #068c67;
-}
-
-/* Login link */
-.login-link {
+/* Login redirect */
+.login-redirect {
   text-align: center;
   font-size: 0.95rem;
   margin-top: 1.2rem;
   color: #ccc;
 }
 
-.login-link a {
+.login-redirect a {
   color: #068c67;
   text-decoration: none;
   font-weight: bold;
 }
 
-.login-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
+/* Responsive design */
 @media (max-width: 768px) {
   .register-grid {
     flex-direction: column-reverse;
@@ -204,4 +155,21 @@
   .register-form-section {
     padding: 2rem;
   }
+}
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white; /* Only text is white */
+}
+
+.login-link a {
+  color: gold;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.login-link a:hover {
+  color: green;
 }

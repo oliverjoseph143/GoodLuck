@@ -1,0 +1,35 @@
+.terms-card {
+  background-color: #000000;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.terms-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffce00;
+}
+
+.terms-content h2 {
+  color: #ffd700;
+  margin-top: 25px;
+  font-size: 1.3rem;
+}
+
+.terms-content p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.terms-footer {
+  color: #ffce00;
+  margin-top: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem; /* You can adjust this size */
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaGoogle, FaFacebookF, FaTimes } from "react-icons/fa";
+import { FaEye, FaEyeSlash , FaTimes } from "react-icons/fa";
 import { IoPerson, IoLockClosed } from "react-icons/io5";
 import "./Login.css";
 import LoginImg from '../../assets/Login.jpg';

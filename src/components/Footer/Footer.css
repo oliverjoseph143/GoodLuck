@@ -1,7 +1,6 @@
 :root {
   --main-bg: #0b0b0b;
   --text-color: #ffffff;
-  --border-green: #4fff4f;
   --icon-hover: #f39c12;
 }
 
@@ -10,28 +9,51 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
   background-color: var(--main-bg);
   color: var(--text-color);
   border-top: 2px solid var(--border-green);
-  padding: 40px 20px;
+  padding-top: 100px;
+  padding-bottom: 40px;
   font-size: 14px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-/* Titles */
+.footer-floating-logo {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.footer-logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid gold;
+  background-color: black;
+  box-shadow: 0 0 15px gold;
+  object-fit: cover;
+}
+
+/* Typography & Lists */
 .footer-container h4,
 .footer-container h5 {
   font-weight: 600;
   margin-bottom: 15px;
+  color: gold;
 }
 
-/* Lists */
 .footer-container ul {
   padding: 0;
   margin: 0;
+  
   list-style: none;
 }
 
@@ -39,69 +61,62 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   color: #ccc;
+  transition: color 0.3s ease;
 }
 
 .footer-container ul li:hover {
   color: var(--border-green);
 }
 
-/* Contact & Icons */
+/* Icons */
 .footer-icons a {
   font-size: 20px;
   color: white;
+  transition: color 0.3s ease;
 }
 
 .footer-icons a:hover {
   color: var(--icon-hover);
 }
 
-.footer-container strong {
-  color: var(--text-color);
-}
-
 /* Logos */
 .payment-logos img,
 .provider-logos img {
-  height: 32px;
-  width: auto;
-  filter: grayscale(0.2);
+  height: 55px;
+  filter: grayscale(0.5);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .payment-logos img:hover,
 .provider-logos img:hover {
-  /* No animation or transform */
+  filter: grayscale(0);
+  transform: scale(1.05);
 }
 
-/* Game Providers Section */
-.provider-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* Payment Methods Section */
+.provider-logos,
 .payment-logos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
-/* Bottom */
+/* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid #333;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-top: 15px;
-  width: 80%;
-  color: #aaa;
   font-size: 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  color: #aaa;
 }
 
 .footer-bottom span {
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .footer-bottom span:hover {
@@ -112,12 +127,11 @@ body {
 @media (max-width: 768px) {
   .footer-container {
     text-align: center;
+    padding-top: 120px;
   }
 
   .footer-icons {
-    display: flex;
     justify-content: center;
-    gap: 15px;
   }
 
   .footer-bottom {
@@ -125,9 +139,9 @@ body {
     align-items: center;
     gap: 10px;
   }
+}
 
-  .provider-logos,
-  .payment-logos {
-    justify-content: center;
-  }
+.col-gold,
+.col-yellow {
+  color: gold;
 }

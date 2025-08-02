@@ -1,6 +1,6 @@
- import React from 'react';
+import React from 'react';
 import './Content.css';
-import Img1 from '../../assets/dash1.jpg';
+import Img1 from '../../assets/dash5.jpg';
 import Img2 from '../../assets/dash2.jpg';
 import Img3 from '../../assets/dash3.jpg';
 import Img4 from '../../assets/dash4.jpg';
@@ -29,7 +29,6 @@ function Content() {
                 ></button>
               ))}
             </div>
-
             <div className="carousel-inner carousel-wrapper">
               <div className="carousel-item active">
                 <img src={Img1} className="d-block w-100 carousel-img" alt="Image 1" />
@@ -82,5 +81,7 @@ function Content() {
     </div>
   );
 }
-
 export default Content;
+
+
+

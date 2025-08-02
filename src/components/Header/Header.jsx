@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from './../../assets/main-logo.jpg';
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleMenuLinkClick = (path) => {
+    setMenuOpen(false);
+    setTimeout(() => {
+      navigate(path);
+    }, 300); // matches CSS transition time
+  };
 
   return (
     <>
@@ -14,26 +23,25 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark px-3 py-2">
         <div className="container-fluid">
           <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img 
-              src={logo} 
-              alt="Logo" 
-              width="40" 
-              height="30" 
+            <img
+              src={logo}
+              alt="Logo"
+              width="40"
+              height="30"
               className="me-2"
               style={{ objectFit: 'cover' }}
-            />
+            />
             <span className="ms-2">
-              Good<span style={{ color: 'var(--border-green)' }}>Luck</span> Casino
+              <span style={{ color: 'white' }}>GoodLuck</span>{' '}
+              <span style={{ color: 'gold' }}>Casino</span>
             </span>
           </Link>
-
 
           <div className="d-flex gap-3 align-items-center">
             <Link to="/login" className="btn btn-login color">LOGIN</Link>
             <Link to="/register" className="btn btn-register color">REGISTER</Link>
             <Link to="/otp" className="btn btn-otp color">OTP</Link>
 
-            {/* Menu Icon */}
             <button className="menu-icon-btn" onClick={() => setMenuOpen(true)}>
               <AiOutlineMenu size={24} />
             </button>
@@ -44,21 +52,18 @@ const Header = () => {
       {/* Side Popup Menu */}
       <div className={`side-popup ${menuOpen ? 'open' : ''}`}>
         <div className="popup-header">
-        <AiOutlineClose size={24} className="popup-close" onClick={() => setMenuOpen(false)} />
+          <AiOutlineClose size={24} className="popup-close" onClick={() => setMenuOpen(false)} />
         </div>
         <ul className="popup-links">
-          <li><Link to="/vip">VIP</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/terms">Terms & Conditions</Link></li>
-          <li><Link to="/privacy">Privacy Policy</Link></li>
-          <li><Link to="/faq">FAQ</Link></li>
-          <li><Link to="/disconnection">Disconnection Policy</Link></li>
-          <li><Link to="/promotions">Promotions</Link></li>
-          <li><Link to="/support">Support</Link></li>
+          <li><button onClick={() => handleMenuLinkClick('/vip')}>VIP</button></li>
+          <li><button onClick={() => handleMenuLinkClick('/about')}>About Us</button></li>
+          <li><button onClick={() => handleMenuLinkClick('/terms')}>Terms & Conditions</button></li>
+          <li><button onClick={() => handleMenuLinkClick('/privacy')}>Privacy Policy</button></li>
+          <li><button onClick={() => handleMenuLinkClick('/faq')}>FAQ</button></li>
+          <li><button onClick={() => handleMenuLinkClick('/disconnection')}>Disconnection Policy</button></li>
         </ul>
       </div>
 
-      {/* Backdrop */}
       {menuOpen && (
         <div className="popup-backdrop" onClick={() => setMenuOpen(false)}></div>
       )}

@@ -1,12 +1,11 @@
-/* Menu Icon Button */
 .menu-icon-btn {
   background: transparent;
   border: none;
   color: white;
   cursor: pointer;
+
 }
 
-/* Side Popup Menu */
 .side-popup {
   position: fixed;
   top: 0;
@@ -33,16 +32,11 @@
   margin-bottom: 30px;
 }
 
-.popup-logo {
-  height: 35px;
-}
-
 .popup-close {
   color: #ffffff;
   cursor: pointer;
 }
 
-/* Popup Menu Links */
 .popup-links {
   list-style: none;
   padding: 0;
@@ -51,20 +45,23 @@
   gap: 20px;
 }
 
-.popup-links li a {
-  color: white; /* updated from #c7c7c7 */
-  text-decoration: none;
+.popup-links li button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
   font-weight: 600;
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
   transition: color 0.2s;
 }
 
-.popup-links li a:hover {
+.popup-links li button:hover {
   color: green;
 }
 
-/* Backdrop */
 .popup-backdrop {
   position: fixed;
   top: 0;
@@ -75,50 +72,30 @@
   z-index: 1000;
 }
 
-/* OTP Button Styling */
-.btn-otp {
-  color: white;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  background: transparent;
-}
-
-/* Login & Register Buttons */
 .btn-login,
-.btn-register {
+.btn-register,
+.btn-otp {
+  background-color: green;
+  color: white !important;
   padding: 6px 14px;
   border-radius: 8px;
   font-weight: bold;
-  color: white !important;
+  border: none;
+  font-size: 14px;
+  transition: all 0.3s ease, transform 0.2s ease-in-out;
   text-decoration: none;
-  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-/* Specific Styling */
-.btn-login {
-  background-color: transparent;
+.btn-login:hover,
+.btn-register:hover,
+.btn-otp:hover {
+  background-color: #006400;
   color: white !important;
-  border: 1px solid white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.4);
 }
 
-.btn-login:hover {
-  color: green !important;
-  border-color: green;
-}
-
-.btn-register {
-  color: white !important;
-  border: 1px solid white;
-}
-
-.btn-register:hover {
-  color: green !important;
-  background: white;
-  border-color: #ccc;
-}
-
-/* Additional Utility Classes */
 .gold {
   color: gold;
 }
